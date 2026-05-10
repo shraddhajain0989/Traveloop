@@ -1,0 +1,281 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Traveloop Backend",
+  "dateExported": "2026-05-10T00:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "signup-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Signup",
+      "url": "http://localhost:5000/api/auth/signup",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"full_name\": \"Ava Walker\",\n  \"email\": \"ava@example.com\",\n  \"password\": \"secret123\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "login-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Login",
+      "url": "http://localhost:5000/api/auth/login",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"ava@example.com\",\n  \"password\": \"secret123\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "profile-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Get Profile",
+      "url": "http://localhost:5000/api/auth/profile",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "create-trip-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Create Trip",
+      "url": "http://localhost:5000/api/trips/create",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"Europe Summer Escape\",\n  \"description\": \"Two weeks across Italy and France\",\n  \"origin_city\": \"New York\",\n  \"start_date\": \"2026-07-03\",\n  \"end_date\": \"2026-07-17\",\n  \"travelers_count\": 2,\n  \"transport_mode\": \"Flights + rail\",\n  \"is_public\": true,\n  \"stops\": [\n    {\n      \"city\": \"Rome\",\n      \"country\": \"Italy\",\n      \"arrival_date\": \"2026-07-03\",\n      \"departure_date\": \"2026-07-07\",\n      \"position\": 0,\n      \"activities\": [\n        {\n          \"title\": \"Colosseum tour\",\n          \"activity_date\": \"2026-07-04\",\n          \"start_time\": \"10:00\",\n          \"end_time\": \"12:00\",\n          \"location\": \"Colosseum\",\n          \"cost\": 45\n        }\n      ]\n    },\n    {\n      \"city\": \"Paris\",\n      \"country\": \"France\",\n      \"arrival_date\": \"2026-07-08\",\n      \"departure_date\": \"2026-07-17\",\n      \"position\": 1\n    }\n  ],\n  \"budget\": {\n    \"total_budget\": 4500,\n    \"currency\": \"USD\",\n    \"transport_budget\": 1500,\n    \"stay_budget\": 1800,\n    \"food_budget\": 700,\n    \"misc_budget\": 500\n  }\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "all-trips-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Get All Trips",
+      "url": "http://localhost:5000/api/trips/all",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "trip-details-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Get Trip By ID",
+      "url": "http://localhost:5000/api/trips/1",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "update-trip-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Update Trip",
+      "url": "http://localhost:5000/api/trips/update/1",
+      "method": "PUT",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"Europe Summer Escape Updated\",\n  \"description\": \"Added more food budget\",\n  \"is_public\": false\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "delete-trip-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Delete Trip",
+      "url": "http://localhost:5000/api/trips/delete/1",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "get-budget-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Get Budget",
+      "url": "http://localhost:5000/api/budget/1",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "update-budget-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Update Budget",
+      "url": "http://localhost:5000/api/budget/update/1",
+      "method": "PUT",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"total_budget\": 5000,\n  \"currency\": \"USD\",\n  \"spent_amount\": 1225.50,\n  \"transport_budget\": 1600,\n  \"stay_budget\": 1900,\n  \"food_budget\": 850,\n  \"misc_budget\": 650,\n  \"notes\": \"Budget revised after hotel booking\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "add-checklist-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Add Checklist Item",
+      "url": "http://localhost:5000/api/checklist/add",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"trip_id\": 1,\n  \"item_name\": \"Passport\",\n  \"category\": \"Documents\",\n  \"is_checked\": false\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "update-checklist-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Update Checklist Item",
+      "url": "http://localhost:5000/api/checklist/update/1",
+      "method": "PUT",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"is_checked\": true\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "delete-checklist-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Delete Checklist Item",
+      "url": "http://localhost:5000/api/checklist/delete/1",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "add-note-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Add Note",
+      "url": "http://localhost:5000/api/notes/add",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"trip_id\": 1,\n  \"title\": \"Arrival Tips\",\n  \"content\": \"Buy a local SIM card at the airport.\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    },
+    {
+      "_id": "delete-note-request",
+      "colId": "traveloop-backend",
+      "containerId": "",
+      "name": "Delete Note",
+      "url": "http://localhost:5000/api/notes/delete/1",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "headers": [],
+    "auth": {
+      "type": "none"
+    }
+  }
+}
