@@ -1,0 +1,30 @@
+import {
+  BadgeDollarSign,
+  CalendarDays,
+  CheckSquare,
+  Compass,
+  LogOut,
+  LayoutDashboard,
+  Map,
+  NotebookPen,
+  Search,
+  Settings,
+  ShieldCheck,
+  UserRound,
+} from "lucide-react";
+
+export const navigationItems = [
+  { label: "Dashboard", labelKey: "dashboard", path: "/dashboard", icon: LayoutDashboard },
+  { label: "My Trips", labelKey: "myTrips", path: "/trips", icon: Map },
+  { label: "Create Trip", labelKey: "createTrip", path: "/trips/new", icon: Compass },
+  { label: "Discover Cities", labelKey: "discoverCities", path: "/discover", icon: Search },
+  { label: "Activities", labelKey: "activities", path: "/activities", icon: Search },
+  { label: "Itinerary", labelKey: "itineraryBuilder", path: "/itinerary", icon: CalendarDays },
+  { label: "Budget", labelKey: "budget", path: "/budget", icon: BadgeDollarSign },
+  { label: "Packing", labelKey: "checklist", path: "/checklist", icon: CheckSquare },
+  { label: "Journal / Notes", labelKey: "journal", path: "/notes", icon: NotebookPen },
+  { label: "Profile", labelKey: "profile", path: "/profile", icon: UserRound },
+  { label: "Settings", labelKey: "settings", path: "/settings", icon: Settings },
+  { label: "Admin", labelKey: "admin", path: "/admin", icon: ShieldCheck },
+  { label: "Logout", labelKey: "logout", path: "/logout", icon: LogOut, action: "logout" },
+];
