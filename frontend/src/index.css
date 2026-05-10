@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-bg: #f5f7fb;
+  --app-bg-accent-1: rgba(91, 75, 255, 0.12);
+  --app-bg-accent-2: rgba(77, 168, 255, 0.16);
+  --surface-1: rgba(255, 255, 255, 0.9);
+  --surface-2: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-soft: rgba(226, 232, 240, 0.9);
+  --chart-grid: #e2e8f0;
+  --chart-axis: #64748b;
+  color: var(--text-primary);
+  background: var(--app-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  --app-bg: #0b1120;
+  --app-bg-accent-1: rgba(91, 75, 255, 0.1);
+  --app-bg-accent-2: rgba(77, 168, 255, 0.08);
+  --surface-1: rgba(15, 23, 42, 0.9);
+  --surface-2: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-soft: rgba(51, 65, 85, 0.9);
+  --chart-grid: #334155;
+  --chart-axis: #cbd5e1;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, var(--app-bg-accent-1), transparent 34rem),
+    radial-gradient(circle at top right, var(--app-bg-accent-2), transparent 30rem),
+    var(--app-bg);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/60 bg-white/85 shadow-premium backdrop-blur-xl;
+  }
+  .dark .glass-panel {
+    @apply border-white/10 bg-slate-800/85;
+  }
+}
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+/* Don't transition transforms/opacity (breaks animations) */
+.animate-fade-up,
+[class*="animate-"],
+[class*="transition-"] {
+  transition: none;
+}
+
+::selection {
+  background: #dae7ff;
+  color: #172554;
+}
+
+.dark ::selection {
+  background: #3730a3;
+  color: #e0e7ff;
+}
