@@ -21,24 +21,18 @@ Traveloop is a personalized travel planning platform that helps users create mul
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js / HTML / CSS / JavaScript
+- React.js /  CSS 
 
 ### Backend
-- Spring Boot / Flask / Node.js
+-  Flask 
 
 ### Database
-- MySQL
+- PODTGRES
 
 ### Tools
 - Git & GitHub
-- Postman
-- VS Code / IntelliJ
-
----
-
-## 📸 Screenshots
-
-Add project screenshots here.
+- THUNDER CLINET
+- VS Code /
 
 ---
 
@@ -47,7 +41,7 @@ Add project screenshots here.
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Traveloop.git
+[git clone https://github.com/your-username/Traveloop.git](https://github.com/shraddhajain0989/Traveloop.git)
 ```
 
 ### Navigate to Project
@@ -76,7 +70,6 @@ npm start
 frontend/
 backend/
 database/
-screenshots/
 ```
 
 ---
